@@ -1,0 +1,221 @@
+[
+  {
+    "Speaker": "Agent",
+    "Text": "Hello, thank you for contacting TechEase Support. My name is Priya. How can I assist you today?",
+    "Entities": [
+      [
+        "TechEase Support",
+        "PRODUCT"
+      ],
+      [
+        "Priya",
+        "PERSON"
+      ],
+      [
+        "today",
+        "DATE"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Inquiry",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "Hi Priya, I bought the EchoBeam XR drone two weeks ago from your website, and I'm having some serious issues with it.",
+    "Entities": [
+      [
+        "two weeks ago",
+        "DATE"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Negative",
+    "Intent": "Complaint",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "I\u00e2\u20ac\u2122m really sorry to hear that. Could you tell me what exactly is going wrong?",
+    "Entities": [],
+    "ProductMentions": [],
+    "Sentiment": "Negative",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "Well, it keeps disconnecting from the controller mid-flight, and once it even crashed into my neighbor\u00e2\u20ac\u2122s fence. I\u00e2\u20ac\u2122m honestly frustrated.",
+    "Entities": [
+      [
+        "neighbor\u00e2\u20ac",
+        "LOC"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Complaint",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "That sounds frustrating indeed, and I truly apologize for the inconvenience. Was this after a firmware update or straight out of the box?",
+    "Entities": [],
+    "ProductMentions": [],
+    "Sentiment": "Negative",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "It was working fine at first, but after I updated the firmware through the AeroControl app, the issues started.",
+    "Entities": [
+      [
+        "first",
+        "ORDINAL"
+      ],
+      [
+        "AeroControl",
+        "PRODUCT"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Complaint",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "Thank you for clarifying. Just to confirm, you're using the AeroControl v2.3.1 app, correct?",
+    "Entities": [
+      [
+        "AeroControl",
+        "PRODUCT"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "Yes, that\u00e2\u20ac\u2122s the version. I even tried reinstalling the app and resetting the drone, but nothing changed.",
+    "Entities": [
+      [
+        "that\u00e2\u20ac",
+        "GPE"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "Got it. I really appreciate your patience and for trying those steps. This seems like a compatibility issue introduced in the last update. You're not the only one reporting it.",
+    "Entities": [],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Complaint",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "So what now? I paid \u00e2\u201a\u00b918,000 for this and it\u00e2\u20ac\u2122s just sitting useless. Can I return it or get a replacement?",
+    "Entities": [],
+    "ProductMentions": [],
+    "Sentiment": "Negative",
+    "Intent": "Inquiry",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "I'm checking the policy right now\u00e2\u20ac\u00a6 Since you're within the 30-day return window, we can offer either a full refund or a replacement. What would you prefer?",
+    "Entities": [
+      [
+        "\u00a6",
+        "PERSON"
+      ],
+      [
+        "30-day",
+        "DATE"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Neutral",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "A replacement would be great. I still want the drone, just one that works properly.",
+    "Entities": [],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "Understood. I\u00e2\u20ac\u2122ll go ahead and initiate the replacement request for your EchoBeam XR. You should receive a confirmation email within 24 hours.",
+    "Entities": [
+      [
+        "24 hours",
+        "TIME"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Neutral",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "Thanks, I really appreciate how you handled this.",
+    "Entities": [],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Inquiry",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "You're very welcome! I truly hope your next drone experience goes much smoother. Is there anything else I can help you with today?",
+    "Entities": [
+      [
+        "today",
+        "DATE"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Customer",
+    "Text": "No, that\u00e2\u20ac\u2122s all for now. Thanks again.",
+    "Entities": [
+      [
+        "that\u00e2\u20ac",
+        "GPE"
+      ]
+    ],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Appreciation",
+    "EmpathyDetected": false
+  },
+  {
+    "Speaker": "Agent",
+    "Text": "You're welcome. Have a great day and fly safe!",
+    "Entities": [],
+    "ProductMentions": [],
+    "Sentiment": "Positive",
+    "Intent": "Other",
+    "EmpathyDetected": false
+  }
+]

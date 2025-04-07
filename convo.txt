@@ -1,0 +1,17 @@
+Agent: Hello, thank you for contacting TechEase Support. My name is Priya. How can I assist you today?
+Customer: Hi Priya, I bought the EchoBeam XR drone two weeks ago from your website, and I'm having some serious issues with it.
+Agent: I’m really sorry to hear that. Could you tell me what exactly is going wrong?
+Customer: Well, it keeps disconnecting from the controller mid-flight, and once it even crashed into my neighbor’s fence. I’m honestly frustrated.
+Agent: That sounds frustrating indeed, and I truly apologize for the inconvenience. Was this after a firmware update or straight out of the box?
+Customer: It was working fine at first, but after I updated the firmware through the AeroControl app, the issues started.
+Agent: Thank you for clarifying. Just to confirm, you're using the AeroControl v2.3.1 app, correct?
+Customer: Yes, that’s the version. I even tried reinstalling the app and resetting the drone, but nothing changed.
+Agent: Got it. I really appreciate your patience and for trying those steps. This seems like a compatibility issue introduced in the last update. You're not the only one reporting it.
+Customer: So what now? I paid ₹18,000 for this and it’s just sitting useless. Can I return it or get a replacement?
+Agent: I'm checking the policy right now… Since you're within the 30-day return window, we can offer either a full refund or a replacement. What would you prefer?
+Customer: A replacement would be great. I still want the drone, just one that works properly.
+Agent: Understood. I’ll go ahead and initiate the replacement request for your EchoBeam XR. You should receive a confirmation email within 24 hours. 
+Customer: Thanks, I really appreciate how you handled this.
+Agent: You're very welcome! I truly hope your next drone experience goes much smoother. Is there anything else I can help you with today?
+Customer: No, that’s all for now. Thanks again.
+Agent: You're welcome. Have a great day and fly safe!
