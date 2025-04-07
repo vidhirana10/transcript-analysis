@@ -1,93 +1,98 @@
 
-```markdown
-# 🎧 Transcript Analysis using Pretrained NLP Models
+# Transcript Analysis using Pretrained NLP Models
 
-This project analyzes customer-agent conversations using pre-trained NLP models. It extracts insights like named entities, product mentions, sentiment, intent, and empathy using state-of-the-art libraries.
+This project analyzes customer-agent call transcripts using state-of-the-art NLP techniques. It extracts key insights such as product mentions, named entities, customer intent, sentiment, and empathy detection — all using pretrained models, making it lightweight, easy to deploy, and language-flexible.
 
 ---
 
-## 🔍 Features
+## Features
 
 - **Named Entity Recognition (NER)**  
-- **Product Mention Extraction** using KeyBERT  
-- **Sentiment Analysis** using HuggingFace Transformers  
-- **Intent Recognition**  
-- **Empathy Detection** using keyword+semantic methods  
-- **Keyword Summarization**
+  Identifies people, organizations, dates, and other important entities in the conversation.
+
+- **Product Mention Extraction**  
+  Extracts products from conversation context using semantic keyword extraction.
+
+- **Customer Sentiment Analysis**  
+  Understands customer sentiment per utterance using transformer-based models.
+
+- **Intent Detection**  
+  Classifies customer intent like Complaint, Query, or Gratitude.
+
+- **Empathy Detection**  
+  Detects empathetic responses from the agent using pretrained embeddings and semantic matching.
 
 ---
 
-## 🧠 Models & Libraries Used
+## Setup
 
-- `transformers`
-- `sentence-transformers`
-- `keybert`
-- `scikit-learn`
-- `spacy`
-- `nltk`
-
----
-
-## 📁 Folder Structure
-
-```
-transcript-analysis/
-├── convo.txt               # Raw input transcript
-├── main.py                 # Main pipeline script
-├── output_analysis.json    # Output JSON with all analysis
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+```bash
+git clone https://github.com/vidhirana10/transcript-analysis.git
+cd transcript-analysis
+python -m venv venv
+source venv/bin/activate   # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+python main.py
 ```
 
 ---
 
-## 🚀 How to Run
+## Input Format
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/vidhirana10/transcript-analysis.git
-   cd transcript-analysis
-   ```
+Place your conversation in a file named `convo.txt` using the following format:
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run analysis:
-   ```bash
-   python main.py
-   ```
+```
+Customer: I’m having trouble with the GalaxyTab.
+Agent: I’m sorry to hear that. Could you explain what’s going wrong?
+Customer: The screen keeps flickering randomly.
+```
 
 ---
 
-## 🛠 TODO
+## Output
 
-- Replace hardcoded product & empathy detection with LLM or semantic techniques
-- Add web UI for interaction
-- Better intent classification via fine-tuned model
-
----
-
-## 💬 Sample Output
+Results will be saved in `output_analysis.json` with the following structure:
 
 ```json
-{
-  "Customer": {
-    "sentiment": "neutral",
-    "intent": "ask_issue",
-    "empathy_detected": false,
-    ...
-  }
-}
+[
+  {
+    "speaker": "Customer",
+    "text": "I’m having trouble with the GalaxyTab.",
+    "entities": ["GalaxyTab"],
+    "intent": "Complaint",
+    "sentiment": "negative"
+  },
+  ...
+]
 ```
 
 ---
 
-## 📌 Author
+## TODOs
 
-**Vidhi Rana**
+- Replace hardcoded product and empathy detection with semantic techniques or LLMs
+- Add simple web UI for uploading files and viewing insights
+- Improve intent classification via fine-tuned models
 
 ---
 
-Would you like to customize the title, TODOs, or output section? Let me know and I’ll help edit it before you commit and push it.
+## Built With
+
+- HuggingFace Transformers
+- KeyBERT
+- Sentence Transformers
+- Python and JSON for processing
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Author
+
+Vidhi Rana  
+[GitHub](https://github.com/vidhirana10) | [LinkedIn](https://linkedin.com/in/vidhirana10)
+
