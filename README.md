@@ -1,7 +1,7 @@
 
 # Transcript Analysis with Gemini LLM
 
-This branch implements an LLM-powered approach for analyzing customer-agent conversation transcripts using Google's Gemini Pro model. It enhances the capabilities of the original pipeline by leveraging generative AI for deeper analysis.
+This branch implements an LLM-powered approach for analyzing customer-agent conversation transcripts using Google's Gemini1.5 Pro model. It enhances the capabilities of the original pipeline by leveraging generative AI for deeper analysis.
 
 ## Features
 
