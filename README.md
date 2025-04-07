@@ -1,98 +1,67 @@
 
-# Transcript Analysis using Pretrained NLP Models
+# Transcript Analysis with Gemini LLM
 
-This project analyzes customer-agent call transcripts using state-of-the-art NLP techniques. It extracts key insights such as product mentions, named entities, customer intent, sentiment, and empathy detection — all using pretrained models, making it lightweight, easy to deploy, and language-flexible.
-
----
+This branch implements an LLM-powered approach for analyzing customer-agent conversation transcripts using Google's Gemini Pro model. It enhances the capabilities of the original pipeline by leveraging generative AI for deeper analysis.
 
 ## Features
 
-- **Named Entity Recognition (NER)**  
-  Identifies people, organizations, dates, and other important entities in the conversation.
+- Named Entity Recognition (NER): Identifies entities such as people, companies, and products.
+- Product Mention Detection: Detects product references within customer queries.
+- Sentiment Analysis: Labels each customer utterance as positive, negative, or neutral.
+- Intent Recognition: Identifies the underlying intent of each customer message.
+- Empathy Detection: Determines whether the agent expressed empathy, and extracts supporting examples.
 
-- **Product Mention Extraction**  
-  Extracts products from conversation context using semantic keyword extraction.
+## File Structure
 
-- **Customer Sentiment Analysis**  
-  Understands customer sentiment per utterance using transformer-based models.
+- `main_llm.py`: Script for processing the transcript using the Gemini API.
+- `convo.txt`: Sample input conversation in plain text format.
+- `output_analysis.json`: Output file with structured analysis results.
+- `requirements.txt`: List of required Python packages.
 
-- **Intent Detection**  
-  Classifies customer intent like Complaint, Query, or Gratitude.
+## Setup Instructions
 
-- **Empathy Detection**  
-  Detects empathetic responses from the agent using pretrained embeddings and semantic matching.
+1. Clone the repository and switch to this branch:
+   ```bash
+   git checkout llm-analysis
+   ```
 
----
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Setup
+3. Set your Gemini API key as an environment variable:
+   ```bash
+   export GEMINI_API_KEY="your_api_key_here"
+   ```
+   Alternatively, you can directly assign the key in `main_llm.py`.
 
-```bash
-git clone https://github.com/vidhirana10/transcript-analysis.git
-cd transcript-analysis
-python -m venv venv
-source venv/bin/activate   # On Windows use: venv\Scripts\activate
-pip install -r requirements.txt
-python main.py
-```
+4. Run the script:
+   ```bash
+   python main_llm.py
+   ```
 
----
-
-## Input Format
-
-Place your conversation in a file named `convo.txt` using the following format:
-
-```
-Customer: I’m having trouble with the GalaxyTab.
-Agent: I’m sorry to hear that. Could you explain what’s going wrong?
-Customer: The screen keeps flickering randomly.
-```
-
----
-
-## Output
-
-Results will be saved in `output_analysis.json` with the following structure:
+## Example Output
 
 ```json
-[
-  {
-    "speaker": "Customer",
-    "text": "I’m having trouble with the GalaxyTab.",
-    "entities": ["GalaxyTab"],
-    "intent": "Complaint",
-    "sentiment": "negative"
-  },
-  ...
-]
+{
+  "named_entities": [{"text": "John", "type": "Person"}],
+  "product_mentions": ["Smart Speaker"],
+  "sentiment_analysis": [{"utterance": "It's not working!", "sentiment": "negative"}],
+  "intents": [{"utterance": "I need a replacement", "intent": "Request Replacement"}],
+  "empathy": {
+    "is_empathy_shown": true,
+    "examples": ["I understand how frustrating this must be for you."]
+  }
+}
 ```
 
----
+## Requirements
 
-## TODOs
+- Python 3.8 or higher
+- `google-generativeai>=0.4.1`
 
-- Replace hardcoded product and empathy detection with semantic techniques or LLMs
-- Add simple web UI for uploading files and viewing insights
-- Improve intent classification via fine-tuned models
+## Notes
 
----
-
-## Built With
-
-- HuggingFace Transformers
-- KeyBERT
-- Sentence Transformers
-- Python and JSON for processing
-
----
-
-## License
-
-MIT License
-
----
-
-## Author
-
-Vidhi Rana  
-[GitHub](https://github.com/vidhirana10) | [LinkedIn](https://linkedin.com/in/vidhirana10)
-
+- Input must be a customer-agent transcript formatted as plain text.
+- The Gemini API may return slight variations in output formatting. Basic error handling is included.
