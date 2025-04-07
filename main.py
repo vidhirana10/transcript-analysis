@@ -5,18 +5,16 @@ import spacy
 from transformers import pipeline
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from pathlib import Path
+from keybert import KeyBERT
 
 # Load models
 nlp_spacy = spacy.load("en_core_web_sm")
 sentiment_model = pipeline("sentiment-analysis")
 sentiment_vader = SentimentIntensityAnalyzer()
+kw_model = KeyBERT()
+empathy_classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
-# Sample product list (extend as needed)
-PRODUCT_KEYWORDS = ["Smartwatch X300", "Premium Plan", "Gold Subscription"]
-
-# Empathy indicators
-EMPATHY_KEYWORDS = ["I understand", "I'm sorry", "I apologize", "That must be frustrating"]
-
+# === File Loader ===
 def load_transcript(file_path):
     ext = Path(file_path).suffix
     if ext == ".csv":
@@ -34,13 +32,17 @@ def load_transcript(file_path):
     else:
         raise ValueError("Unsupported file format. Use .txt or .csv")
 
+# === Entity Recognition ===
 def extract_entities(text):
     doc = nlp_spacy(text)
     return [(ent.text, ent.label_) for ent in doc.ents]
 
+# === Dynamic Product Mention Detection ===
 def detect_products(text):
-    return [product for product in PRODUCT_KEYWORDS if product.lower() in text.lower()]
+    keywords = kw_model.extract_keywords(text, keyphrase_ngram_range=(1, 2), stop_words='english', top_n=3)
+    return [kw[0] for kw in keywords]
 
+# === Sentiment Analysis ===
 def analyze_sentiment(text):
     score = sentiment_vader.polarity_scores(text)
     if score['compound'] >= 0.05:
@@ -50,20 +52,25 @@ def analyze_sentiment(text):
     else:
         return "Neutral"
 
+# === Empathy Detection using Zero-shot Classification ===
 def detect_empathy(text):
-    return any(phrase.lower() in text.lower() for phrase in EMPATHY_KEYWORDS)
+    candidate_labels = ["empathy", "no empathy"]
+    result = empathy_classifier(text, candidate_labels)
+    return result['labels'][0] == "empathy"
 
+# === Mock Intent ===
 def mock_intent(text):
-    # Simplified intent classifier based on keywords
-    if any(x in text.lower() for x in ["not working", "issue", "problem", "frustrated"]):
+    text_lower = text.lower()
+    if any(x in text_lower for x in ["not working", "issue", "problem", "frustrated"]):
         return "Complaint"
-    elif any(x in text.lower() for x in ["how", "can i", "what is"]):
+    elif any(x in text_lower for x in ["how", "can i", "what is"]):
         return "Inquiry"
-    elif any(x in text.lower() for x in ["thanks", "appreciate"]):
+    elif any(x in text_lower for x in ["thanks", "appreciate"]):
         return "Appreciation"
     else:
         return "Other"
 
+# === Analyzer ===
 def analyze_transcript(conversation):
     output = []
     for turn in conversation:
@@ -80,6 +87,7 @@ def analyze_transcript(conversation):
         output.append(analysis)
     return output
 
+# === Main Entry ===
 def main(file_path):
     conversation = load_transcript(file_path)
     results = analyze_transcript(conversation)
@@ -89,7 +97,7 @@ def main(file_path):
     output_file = "output_analysis.json"
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"\nResults saved to {output_file}")
+    print(f"\n✅ Results saved to {output_file}")
 
 if __name__ == "__main__":
     import argparse

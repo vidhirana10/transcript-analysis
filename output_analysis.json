@@ -16,10 +16,14 @@
         "DATE"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "contacting techease",
+      "techease support",
+      "support priya"
+    ],
     "Sentiment": "Positive",
     "Intent": "Inquiry",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
@@ -30,7 +34,11 @@
         "DATE"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "xr drone",
+      "echobeam xr",
+      "bought echobeam"
+    ],
     "Sentiment": "Negative",
     "Intent": "Complaint",
     "EmpathyDetected": false
@@ -39,10 +47,14 @@
     "Speaker": "Agent",
     "Text": "I\u00e2\u20ac\u2122m really sorry to hear that. Could you tell me what exactly is going wrong?",
     "Entities": [],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "sorry hear",
+      "going wrong",
+      "i\u00e2"
+    ],
     "Sentiment": "Negative",
     "Intent": "Other",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
@@ -53,7 +65,11 @@
         "LOC"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "disconnecting controller",
+      "keeps disconnecting",
+      "disconnecting"
+    ],
     "Sentiment": "Positive",
     "Intent": "Complaint",
     "EmpathyDetected": false
@@ -62,10 +78,14 @@
     "Speaker": "Agent",
     "Text": "That sounds frustrating indeed, and I truly apologize for the inconvenience. Was this after a firmware update or straight out of the box?",
     "Entities": [],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "inconvenience firmware",
+      "firmware update",
+      "firmware"
+    ],
     "Sentiment": "Negative",
     "Intent": "Other",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
@@ -80,7 +100,11 @@
         "PRODUCT"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "firmware aerocontrol",
+      "aerocontrol app",
+      "aerocontrol"
+    ],
     "Sentiment": "Positive",
     "Intent": "Complaint",
     "EmpathyDetected": false
@@ -94,10 +118,14 @@
         "PRODUCT"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "aerocontrol v2",
+      "using aerocontrol",
+      "aerocontrol"
+    ],
     "Sentiment": "Positive",
     "Intent": "Other",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
@@ -108,7 +136,11 @@
         "GPE"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "drone changed",
+      "resetting drone",
+      "that\u00e2 version"
+    ],
     "Sentiment": "Positive",
     "Intent": "Other",
     "EmpathyDetected": false
@@ -117,16 +149,24 @@
     "Speaker": "Agent",
     "Text": "Got it. I really appreciate your patience and for trying those steps. This seems like a compatibility issue introduced in the last update. You're not the only one reporting it.",
     "Entities": [],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "compatibility issue",
+      "appreciate patience",
+      "introduced update"
+    ],
     "Sentiment": "Positive",
     "Intent": "Complaint",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
     "Text": "So what now? I paid \u00e2\u201a\u00b918,000 for this and it\u00e2\u20ac\u2122s just sitting useless. Can I return it or get a replacement?",
     "Entities": [],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "return replacement",
+      "paid \u00b918",
+      "000 it\u00e2"
+    ],
     "Sentiment": "Negative",
     "Intent": "Inquiry",
     "EmpathyDetected": false
@@ -144,16 +184,24 @@
         "DATE"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "refund replacement",
+      "refund",
+      "offer refund"
+    ],
     "Sentiment": "Neutral",
     "Intent": "Other",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
     "Text": "A replacement would be great. I still want the drone, just one that works properly.",
     "Entities": [],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "want drone",
+      "drone just",
+      "drone"
+    ],
     "Sentiment": "Positive",
     "Intent": "Other",
     "EmpathyDetected": false
@@ -167,16 +215,24 @@
         "TIME"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "echobeam xr",
+      "request echobeam",
+      "echobeam"
+    ],
     "Sentiment": "Neutral",
     "Intent": "Other",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
     "Text": "Thanks, I really appreciate how you handled this.",
     "Entities": [],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "appreciate handled",
+      "really appreciate",
+      "appreciate"
+    ],
     "Sentiment": "Positive",
     "Intent": "Inquiry",
     "EmpathyDetected": false
@@ -190,10 +246,14 @@
         "DATE"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "drone experience",
+      "drone",
+      "hope drone"
+    ],
     "Sentiment": "Positive",
     "Intent": "Other",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   },
   {
     "Speaker": "Customer",
@@ -204,7 +264,11 @@
         "GPE"
       ]
     ],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "that\u00e2 thanks",
+      "that\u00e2",
+      "thanks"
+    ],
     "Sentiment": "Positive",
     "Intent": "Appreciation",
     "EmpathyDetected": false
@@ -213,9 +277,13 @@
     "Speaker": "Agent",
     "Text": "You're welcome. Have a great day and fly safe!",
     "Entities": [],
-    "ProductMentions": [],
+    "ProductMentions": [
+      "fly safe",
+      "day fly",
+      "welcome"
+    ],
     "Sentiment": "Positive",
     "Intent": "Other",
-    "EmpathyDetected": false
+    "EmpathyDetected": true
   }
 ]
