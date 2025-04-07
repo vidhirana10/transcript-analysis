@@ -15,7 +15,7 @@ This branch implements an LLM-powered approach for analyzing customer-agent conv
 
 - `main_llm.py`: Script for processing the transcript using the Gemini API.
 - `convo.txt`: Sample input conversation in plain text format.
-- `output_analysis.json`: Output file with structured analysis results.
+- `output_analysis_llm.json`: Output file with structured analysis results.
 - `requirements.txt`: List of required Python packages.
 
 ## Setup Instructions
