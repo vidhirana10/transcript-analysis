@@ -94,5 +94,5 @@ MIT License
 ## Author
 
 Vidhi Rana  
-[GitHub](https://github.com/vidhirana10) | [LinkedIn](https://linkedin.com/in/vidhirana10)
+[GitHub](https://github.com/vidhirana10) | [LinkedIn](https://www.linkedin.com/in/vidhi-rana-604b3a21a/)
 
