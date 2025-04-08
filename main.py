@@ -97,7 +97,7 @@ def main(file_path):
     output_file = "output_analysis.json"
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"\n✅ Results saved to {output_file}")
+    print(f"\n Results saved to {output_file}")
 
 if __name__ == "__main__":
     import argparse
