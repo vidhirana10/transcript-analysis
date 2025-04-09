@@ -21,7 +21,7 @@
       "techease support",
       "support priya"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Neutral",
     "Intent": "Inquiry",
     "EmpathyDetected": true
   },
@@ -39,7 +39,7 @@
       "echobeam xr",
       "bought echobeam"
     ],
-    "Sentiment": "Negative",
+    "Sentiment": "Sadness",
     "Intent": "Complaint",
     "EmpathyDetected": false
   },
@@ -52,7 +52,7 @@
       "going wrong",
       "i\u00e2"
     ],
-    "Sentiment": "Negative",
+    "Sentiment": "Sadness",
     "Intent": "Other",
     "EmpathyDetected": true
   },
@@ -70,7 +70,7 @@
       "keeps disconnecting",
       "disconnecting"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Anger",
     "Intent": "Complaint",
     "EmpathyDetected": false
   },
@@ -83,7 +83,7 @@
       "firmware update",
       "firmware"
     ],
-    "Sentiment": "Negative",
+    "Sentiment": "Sadness",
     "Intent": "Other",
     "EmpathyDetected": true
   },
@@ -105,7 +105,7 @@
       "aerocontrol app",
       "aerocontrol"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Sadness",
     "Intent": "Complaint",
     "EmpathyDetected": false
   },
@@ -123,7 +123,7 @@
       "using aerocontrol",
       "aerocontrol"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Neutral",
     "Intent": "Other",
     "EmpathyDetected": true
   },
@@ -141,7 +141,7 @@
       "resetting drone",
       "that\u00e2 version"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Neutral",
     "Intent": "Other",
     "EmpathyDetected": false
   },
@@ -154,7 +154,7 @@
       "appreciate patience",
       "introduced update"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Neutral",
     "Intent": "Complaint",
     "EmpathyDetected": true
   },
@@ -167,7 +167,7 @@
       "paid \u00b918",
       "000 it\u00e2"
     ],
-    "Sentiment": "Negative",
+    "Sentiment": "Anger",
     "Intent": "Inquiry",
     "EmpathyDetected": false
   },
@@ -202,7 +202,7 @@
       "drone just",
       "drone"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Neutral",
     "Intent": "Other",
     "EmpathyDetected": false
   },
@@ -233,7 +233,7 @@
       "really appreciate",
       "appreciate"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Joy",
     "Intent": "Inquiry",
     "EmpathyDetected": false
   },
@@ -251,7 +251,7 @@
       "drone",
       "hope drone"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Joy",
     "Intent": "Other",
     "EmpathyDetected": true
   },
@@ -269,7 +269,7 @@
       "that\u00e2",
       "thanks"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Neutral",
     "Intent": "Appreciation",
     "EmpathyDetected": false
   },
@@ -282,7 +282,7 @@
       "day fly",
       "welcome"
     ],
-    "Sentiment": "Positive",
+    "Sentiment": "Joy",
     "Intent": "Other",
     "EmpathyDetected": true
   }

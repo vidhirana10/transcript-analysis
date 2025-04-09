@@ -3,15 +3,20 @@ import json
 import pandas as pd
 import spacy
 from transformers import pipeline
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from pathlib import Path
 from keybert import KeyBERT
 
 # Load models
 nlp_spacy = spacy.load("en_core_web_sm")
-sentiment_model = pipeline("sentiment-analysis")
-sentiment_vader = SentimentIntensityAnalyzer()
 kw_model = KeyBERT()
+
+# === Replacing VADER with Emotion Transformer ===
+emotion_classifier = pipeline(
+    "text-classification",
+    model="j-hartmann/emotion-english-distilroberta-base",
+    return_all_scores=False
+)
+
 empathy_classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
 # === File Loader ===
@@ -42,15 +47,10 @@ def detect_products(text):
     keywords = kw_model.extract_keywords(text, keyphrase_ngram_range=(1, 2), stop_words='english', top_n=3)
     return [kw[0] for kw in keywords]
 
-# === Sentiment Analysis ===
+# === Emotion-Based Sentiment Analysis ===
 def analyze_sentiment(text):
-    score = sentiment_vader.polarity_scores(text)
-    if score['compound'] >= 0.05:
-        return "Positive"
-    elif score['compound'] <= -0.05:
-        return "Negative"
-    else:
-        return "Neutral"
+    result = emotion_classifier(text)
+    return result[0]['label'].capitalize()
 
 # === Empathy Detection using Zero-shot Classification ===
 def detect_empathy(text):
@@ -58,7 +58,7 @@ def detect_empathy(text):
     result = empathy_classifier(text, candidate_labels)
     return result['labels'][0] == "empathy"
 
-# === Mock Intent ===
+# === Intent Detection (Mock) ===
 def mock_intent(text):
     text_lower = text.lower()
     if any(x in text_lower for x in ["not working", "issue", "problem", "frustrated"]):
@@ -97,7 +97,7 @@ def main(file_path):
     output_file = "output_analysis.json"
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"\n Results saved to {output_file}")
+    print(f"\nResults saved to {output_file}")
 
 if __name__ == "__main__":
     import argparse
