@@ -1,30 +1,30 @@
 
 # Transcript Analysis using Pretrained NLP Models
 
-This project analyzes customer-agent call transcripts using state-of-the-art NLP techniques. It extracts key insights such as product mentions, named entities, customer intent, sentiment, and empathy detection — all using pretrained models, making it lightweight, easy to deploy, and language-flexible.
+This project analyzes customer-agent call transcripts using state-of-the-art NLP techniques. It extracts key insights such as product mentions, named entities, customer intent, emotion-based sentiment, and empathy detection — all using pretrained models, making it lightweight, scalable, and ready for real-world applications.
 
 ---
 
-## Features
+## 🔍 Features
 
 - **Named Entity Recognition (NER)**  
-  Identifies people, organizations, dates, and other important entities in the conversation.
+  Identifies names, dates, locations, and other key entities using spaCy.
 
 - **Product Mention Extraction**  
-  Extracts products from conversation context using semantic keyword extraction.
+  Extracts relevant products dynamically using `KeyBERT` with contextual embedding.
 
-- **Customer Sentiment Analysis**  
-  Understands customer sentiment per utterance using transformer-based models.
+- **Emotion-Based Sentiment Analysis**  
+  Uses a RoBERTa-based transformer model to detect nuanced emotions like _joy, sadness, anger, love, optimism,_ and _fear_.
 
-- **Intent Detection**  
-  Classifies customer intent like Complaint, Query, or Gratitude.
+- **Intent Detection (Rule-based)**  
+  Classifies user intent into categories such as _Complaint_, _Inquiry_, or _Appreciation_.
 
-- **Empathy Detection**  
-  Detects empathetic responses from the agent using pretrained embeddings and semantic matching.
+- **Empathy Detection (Zero-Shot)**  
+  Uses zero-shot classification with BART to detect empathetic behavior in agent responses.
 
 ---
 
-## Setup
+## ⚙️ Setup
 
 ```bash
 git clone https://github.com/vidhirana10/transcript-analysis.git
@@ -32,35 +32,37 @@ cd transcript-analysis
 python -m venv venv
 source venv/bin/activate   # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
-python main.py
+python main.py --file convo.txt
 ```
 
 ---
 
-## Input Format
+## 📝 Input Format
 
-Place your conversation in a file named `convo.txt` using the following format:
+Create a transcript file named `convo.txt` in the following format:
 
 ```
-Customer: I’m having trouble with the GalaxyTab.
-Agent: I’m sorry to hear that. Could you explain what’s going wrong?
-Customer: The screen keeps flickering randomly.
+Customer: I'm facing issues with my SmartWatch Pro.
+Agent: I'm really sorry to hear that! Can you describe the issue?
+Customer: The screen keeps freezing and it's very frustrating.
 ```
 
 ---
 
-## Output
+## 📤 Output
 
-Results will be saved in `output_analysis.json` with the following structure:
+After analysis, results will be saved in `output_analysis.json` with a structure like:
 
 ```json
 [
   {
-    "speaker": "Customer",
-    "text": "I’m having trouble with the GalaxyTab.",
-    "entities": ["GalaxyTab"],
-    "intent": "Complaint",
-    "sentiment": "negative"
+    "Speaker": "Customer",
+    "Text": "I'm facing issues with my SmartWatch Pro.",
+    "Entities": [["SmartWatch Pro", "PRODUCT"]],
+    "ProductMentions": ["smartwatch"],
+    "Sentiment": "anger",
+    "Intent": "Complaint",
+    "EmpathyDetected": false
   },
   ...
 ]
@@ -68,30 +70,31 @@ Results will be saved in `output_analysis.json` with the following structure:
 
 ---
 
-## TODOs
+## 🛠 TODOs
 
-- Replace hardcoded product and empathy detection with semantic techniques or LLMs
-- Add simple web UI for uploading files and viewing insights
-- Improve intent classification via fine-tuned models
-
----
-
-## Built With
-
-- HuggingFace Transformers
-- KeyBERT
-- Sentence Transformers
-- Python and JSON for processing
+- Add UI for drag-and-drop conversation uploads
+- Integrate Gemini/GPT-based LLM pipeline
+- Replace rule-based intent detection with fine-tuned classifier
+- Visualize sentiment/empathy trends over time
 
 ---
 
-## License
+## 📦 Built With
+
+- **spaCy** for NER  
+- **KeyBERT** for keyword extraction  
+- **RoBERTa** for emotion sentiment classification (`j-hartmann/emotion-english-distilroberta-base`)  
+- **BART (zero-shot)** for empathy classification  
+- **Python** + **JSON** for lightweight processing
+
+---
+
+## 📄 License
 
 MIT License
 
 ---
 
-## Author
+## 👩🏻‍💻 Author
 
-Vidhi Rana  
-[GitHub](https://github.com/vidhirana10) | [LinkedIn](https://linkedin.com/in/vidhirana10)
+**Vidhi Rana**  
