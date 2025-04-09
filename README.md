@@ -5,7 +5,7 @@ This project analyzes customer-agent call transcripts using state-of-the-art NLP
 
 ---
 
-## 🔍 Features
+##  Features
 
 - **Named Entity Recognition (NER)**  
   Identifies names, dates, locations, and other key entities using spaCy.
@@ -37,7 +37,7 @@ python main.py --file convo.txt
 
 ---
 
-## 📝 Input Format
+##  Input Format
 
 Create a transcript file named `convo.txt` in the following format:
 
@@ -49,7 +49,7 @@ Customer: The screen keeps freezing and it's very frustrating.
 
 ---
 
-## 📤 Output
+##  Output
 
 After analysis, results will be saved in `output_analysis.json` with a structure like:
 
@@ -70,7 +70,7 @@ After analysis, results will be saved in `output_analysis.json` with a structure
 
 ---
 
-## 🛠 TODOs
+##  TODOs
 
 - Add UI for drag-and-drop conversation uploads
 - Integrate Gemini/GPT-based LLM pipeline
@@ -79,7 +79,7 @@ After analysis, results will be saved in `output_analysis.json` with a structure
 
 ---
 
-## 📦 Built With
+##  Built With
 
 - **spaCy** for NER  
 - **KeyBERT** for keyword extraction  
@@ -89,7 +89,7 @@ After analysis, results will be saved in `output_analysis.json` with a structure
 
 ---
 
-## 📄 License
+##  License
 
 MIT License
 
